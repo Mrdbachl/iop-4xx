@@ -1,0 +1,9 @@
+body {
+	font-family: Cambria, "Times New Roman";
+	margin-top: 50px;
+	color: white;
+}
+#clock {
+	font-weight: 300;
+	font-size: 60px;
+}
