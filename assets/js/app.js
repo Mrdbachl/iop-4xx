@@ -59,9 +59,9 @@ function initializeApplication() {
 }
 
 function hexClock () {
-			var elFooter = document.createElement('footer');
-			document.getElementById('clock');
-			elFooter.innerHTML = clock;
+			//var elFooter = document.createElement('footer');
+			//document.getElementById('clock');
+			//elFooter.innerHTML = clock;
 			var time = new Date();
 			var hours = (time.getHours() % 12).toString();
 			var minutes = time.getMinutes().toString();
