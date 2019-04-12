@@ -11,3 +11,7 @@ inside out project version 401-0
 	- moved the title & tag line variables into appData
 	- refactored the initializeApplication function.
 
+inside out project version 401-1
+	- added bootstrap to the index.html 
+	- added a DOM injection of the progressbar to app.js
+	- created the displayPB function in the app.js
