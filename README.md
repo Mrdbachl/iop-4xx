@@ -20,3 +20,14 @@ inside out project version 402-0
 	- added style.css and linked in index.html
 	- added login form function and call after progress bar is completed	
 	-added minimal validateLogin function to check for blank strings
+	
+inside out project version 403-0
+	- moved stylesheet link below animate and bootstrap to allow fore custom styles to override all
+	-style.css
+		- added styles for application interface - sidebar, wrapper, navigation, etc.
+	-app.js
+		-added the applicationUserInterface function which defines the application user interface
+		-added the buildMenu function which returns the navigation menu and will increase in dynamic navigation building. 
+		-added the buildMain function which returns the primary content area and will evolve to return content dynamically. 
+		-replaced document write with call to applicationUserInterface function in the validateLogin function.
+		-added the linkClicked function which is calledby click events on anchor elements and returns dynamically driven results.
