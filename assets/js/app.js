@@ -77,7 +77,8 @@ function validateLogin(){
 	var email = document.getElementById("email").value;
 	var password = document.getElementById("pwd").value;
 	if (email !== '' && password !== '') {
-		document.body.innerHTML = '<main class="animated zoomIn"><h1 id="inNow">We are in now</h1></main>';
+		//document.body.innerHTML = '<main class="animated zoomIn"><h1 id="inNow">We are in now</h1></main>';//
+		applicationUserInterface();
 	} else {
 		alert('bad');
 		
@@ -86,3 +87,28 @@ function validateLogin(){
 }
 
 //end step 402.0
+
+function applicationUserInterface () {
+	let header = '<div class="container-fluid"><div class="row"><div class="col-12"><nav id="header" class="navbar navbar-dark fixed-top bg-dark"><a class="navbar-brand" data-dest="logoLink" href="#">inside out</a></nav></div></div>';
+	let main = '<div class="row contStage"><div class="col-2">'+ buildMenu() +'</div><div class="col-10">' + buildMain() + '</div></div>';
+	let footer = '<div class="row"><div class="col-12"><nav id="footer" class="navbar fixed-bottom navbar-dark bg-dark"></nav></div></div></div>';
+	document.body.style.backgroundColor = '#FFF';
+	document.body.innerHTML = header + main + footer;
+	var links = document.getElementsByTagName('a');
+	for (var i = 0; i < links.length; i++) links[i].onclick = function () {
+		linkClicked(this);
+	}
+}
+
+function buildMenu() {
+	return '<nav class="sidebar animated slideInLeft"><ul class="nav flex-column"><li class="nav-item"><a class="nav-link active" data-dest="link01" href="#">Active</a></li><li class="nav-item"><a class="nav-link" data-dest="link02" href="#">Link</a></li><li class="nav-item"><a class="nav-link" data-dest="link03" href="#">Link</a></li><li class="nav-item"><a class="nav-link disabled" data-dest="link04" href="#">Disabled</a></li></ul></nav>';
+}
+
+function buildMain() {
+	return '<main id="main" role="main"><h1 class="animated zoomIn">Main Content</h1></main>';
+}
+
+function linkClicked(obj) {
+	console.log(obj.dataset.dest);
+	var str = '<h1 class="animated zoomIn">'+ obj.dataset.dest +' was clicked!</h1>'; document.getElementById("main").innerHTML = str.repeat(20);
+}
