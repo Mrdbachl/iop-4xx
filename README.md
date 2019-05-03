@@ -45,3 +45,19 @@ inside out project version 404-0
 	- added the assets/data/quotes.js file
 		- code changes https://www.diffchecker.com/ylRCv0UM
 		- used find and replace function to locate and replace all trademark characters with apostrophes in the text.
+inside out project version 405-0
+	-index.html
+		-added script tag to pull in ajax.js file
+	-style.css
+		-modified .contStage by adjusting the (left: 180px;) - changed value to 80px to close gap between side menu and content
+		-cleaned up comments
+	-app.js
+		-cleaned up comments
+		-added sideMenu array to the appData object to be used to call ajax to load the pages and posts from the me site
+		-modified the displayPB() function - changed preloader time from 50 to 15 speed to speed up load during development
+		-modified the buildMenu() function to accept menu items from appData object - removed call to quotes array
+		-modified the linkClicked () function
+			-added conditional to evaluate if the objet clicked is in the menu array of the appData.sideMenu object
+			-added ajax call to grab posts and pages
+	-added the assets/js/ajax.js file
+		
