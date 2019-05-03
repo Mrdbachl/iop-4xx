@@ -31,3 +31,17 @@ inside out project version 403-0
 		-added the buildMain function which returns the primary content area and will evolve to return content dynamically. 
 		-replaced document write with call to applicationUserInterface function in the validateLogin function.
 		-added the linkClicked function which is calledby click events on anchor elements and returns dynamically driven results.
+		
+inside out project version 404-0
+	- index.html
+		- code changes https://www.diffchecker.com/oybNnzTY
+		- removed comments and cleaned code
+		- added script tag for quotes.js file
+	- style.css
+		-code changes at https://www.diffchecker.com/114fW8QY
+		-added the quotArr sort to the initializeApplication function
+		-modified buildMenu function to dynamically build the menu from the array
+		-modified linkClicked function to dynamically populate main content with array content
+	- added the assets/data/quotes.js file
+		- code changes https://www.diffchecker.com/ylRCv0UM
+		- used find and replace function to locate and replace all trademark characters with apostrophes in the text.
